@@ -1,183 +1,127 @@
 ```javascript
-/* =================================
-   TYPING ANIMATION
-================================= */
+/* =====================================
+   TYPING EFFECT
+===================================== */
 
-const typingText = document.querySelector(".typing");
+const typing = document.querySelector(".typing");
 
 const words = [
-  "Computer Science Student",
-  "Web Developer",
-  "Programmer",
-  "Technology Enthusiast",
-  "Cat Lover 🐱"
+    "Computer Science Student",
+    "Web Developer",
+    "Programmer",
+    "Technology Enthusiast"
 ];
 
 let wordIndex = 0;
 let charIndex = 0;
 let deleting = false;
 
-function typingAnimation() {
+function typeEffect() {
 
-  const currentWord = words[wordIndex];
+    if (!typing) return;
 
-  if (!deleting) {
+    const currentWord = words[wordIndex];
 
-    typingText.textContent =
-      currentWord.substring(0, charIndex + 1);
+    if (!deleting) {
 
-    charIndex++;
+        typing.textContent =
+            currentWord.substring(0, charIndex + 1);
 
-    if (charIndex === currentWord.length) {
+        charIndex++;
 
-      deleting = true;
+        if (charIndex === currentWord.length) {
 
-      setTimeout(typingAnimation, 1500);
+            deleting = true;
 
-      return;
-    }
+            setTimeout(typeEffect, 1500);
 
-  } else {
-
-    typingText.textContent =
-      currentWord.substring(0, charIndex - 1);
-
-    charIndex--;
-
-    if (charIndex === 0) {
-
-      deleting = false;
-
-      wordIndex++;
-
-      if (wordIndex === words.length) {
-        wordIndex = 0;
-      }
-
-    }
-  }
-
-  setTimeout(
-    typingAnimation,
-    deleting ? 60 : 100
-  );
-}
-
-typingAnimation();
-
-
-/* =================================
-   SCROLL REVEAL
-================================= */
-
-const sections =
-  document.querySelectorAll("section");
-
-const observer =
-  new IntersectionObserver(
-    entries => {
-
-      entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-
-          entry.target.classList.add("show");
-
+            return;
         }
 
-      });
+    } else {
 
-    },
+        typing.textContent =
+            currentWord.substring(0, charIndex - 1);
 
-    {
-      threshold: 0.15
+        charIndex--;
+
+        if (charIndex === 0) {
+
+            deleting = false;
+
+            wordIndex++;
+
+            if (wordIndex >= words.length) {
+                wordIndex = 0;
+            }
+        }
     }
-  );
 
-
-sections.forEach(section => {
-  observer.observe(section);
-});
-
-
-/* =================================
-   CAT CLICK EFFECT
-================================= */
-
-document.addEventListener("click", function(event) {
-
-  const paw = document.createElement("span");
-
-  paw.innerHTML = "🐾";
-
-  paw.style.position = "fixed";
-  paw.style.left = event.clientX + "px";
-  paw.style.top = event.clientY + "px";
-
-  paw.style.pointerEvents = "none";
-  paw.style.fontSize = "25px";
-  paw.style.zIndex = "9999";
-
-  paw.style.animation =
-    "pawPop 1s ease-out forwards";
-
-  document.body.appendChild(paw);
-
-  setTimeout(() => {
-    paw.remove();
-  }, 1000);
-
-});
-
-
-/* =================================
-   PAW CLICK ANIMATION
-================================= */
-
-const style = document.createElement("style");
-
-style.innerHTML = `
-
-@keyframes pawPop {
-
-  0% {
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 1;
-  }
-
-  50% {
-    transform: translate(-50%, -100px) scale(1.2) rotate(15deg);
-    opacity: 0.8;
-  }
-
-  100% {
-    transform: translate(-50%, -160px) scale(0.7) rotate(-15deg);
-    opacity: 0;
-  }
-
+    setTimeout(
+        typeEffect,
+        deleting ? 50 : 100
+    );
 }
 
-`;
-
-document.head.appendChild(style);
+typeEffect();
 
 
-/* =================================
-   PROJECT BUTTON
-================================= */
+/* =====================================
+   SCROLL REVEAL
+===================================== */
 
-const projectButtons =
-  document.querySelectorAll(".project-card button");
+const sections =
+    document.querySelectorAll("section");
 
-projectButtons.forEach(button => {
+const observer =
+    new IntersectionObserver(
+        function(entries) {
 
-  button.addEventListener("click", () => {
+            entries.forEach(function(entry) {
 
-    alert(
-      "🐱 Project details coming soon!"
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
     );
 
-  });
+
+sections.forEach(function(section) {
+
+    observer.observe(section);
+
+});
+
+
+/* =====================================
+   PROJECT BUTTON
+===================================== */
+
+const buttons =
+    document.querySelectorAll(
+        ".project-card button"
+    );
+
+buttons.forEach(function(button) {
+
+    button.addEventListener(
+        "click",
+        function() {
+
+            alert(
+                "Project details will be added soon."
+            );
+
+        }
+    );
 
 });
 ```
