@@ -3,7 +3,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta name="viewport"
@@ -11,16 +10,48 @@
 
     <title>Jessam Sarsaba | ePortfolio</title>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
 
-    <!-- ==============================
-         HERO SECTION
-    =============================== -->
+
+    <!-- =================================
+         ANIMATED COFFEE PARTICLES
+    ================================== -->
+
+    <div class="coffee-background">
+
+        <span>☕</span>
+        <span>☕</span>
+        <span>✦</span>
+        <span>☕</span>
+        <span>•</span>
+        <span>☕</span>
+        <span>✦</span>
+        <span>☕</span>
+        <span>•</span>
+        <span>☕</span>
+        <span>✦</span>
+        <span>☕</span>
+
+    </div>
+
+
+
+    <!-- =================================
+         HERO
+    ================================== -->
 
     <header class="hero">
 
@@ -28,9 +59,10 @@
 
         <nav>
 
-            <h2 class="logo">
+            <a href="#" class="logo">
                 ☕ Jessam.dev
-            </h2>
+            </a>
+
 
             <div class="nav-links">
 
@@ -59,6 +91,7 @@
         </nav>
 
 
+
         <!-- Hero Content -->
 
         <div class="hero-content">
@@ -67,21 +100,47 @@
                 Welcome to my ePortfolio
             </p>
 
+
             <h1>
                 Jessam Misael G. Sarsaba
             </h1>
 
+
             <h3>
                 <span class="typing"></span>
+                <span class="cursor">|</span>
             </h3>
+
 
             <p class="hero-description">
                 Turning ideas into code, one cup of coffee at a time.
             </p>
 
-            <a href="#about" class="button">
-                Explore My Portfolio
-            </a>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="button">
+                    View My Work
+                </a>
+
+                <a href="#contact" class="button secondary-button">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Scroll indicator -->
+
+        <div class="scroll-indicator">
+
+            <span>Scroll to explore</span>
+
+            <div class="scroll-arrow">
+                ↓
+            </div>
 
         </div>
 
@@ -89,30 +148,49 @@
 
 
 
-    <!-- ==============================
-         MAIN CONTENT
-    =============================== -->
+    <!-- =================================
+         MAIN
+    ================================== -->
 
     <main>
 
 
-        <!-- ==============================
+        <!-- =================================
              ABOUT
-        =============================== -->
+        ================================== -->
 
         <section id="about">
+
+            <div class="section-heading">
+
+                <span class="section-line"></span>
+
+                <p>GET TO KNOW ME</p>
+
+                <span class="section-line"></span>
+
+            </div>
+
 
             <h2>
                 About Me
             </h2>
 
+
             <div class="about-card">
 
-                <div>
+
+                <div class="about-icon">
+                    ☕
+                </div>
+
+
+                <div class="about-content">
 
                     <h3>
                         Hello, I'm Jessam.
                     </h3>
+
 
                     <p>
                         Welcome to my ePortfolio! I am a
@@ -121,7 +199,6 @@
                         and technology.
                     </p>
 
-                    <br>
 
                     <p>
                         I enjoy learning new technologies,
@@ -130,7 +207,6 @@
                         programming and problem-solving.
                     </p>
 
-                    <br>
 
                     <p>
                         My goal is to continuously improve
@@ -138,6 +214,11 @@
                         experience in software and web
                         development.
                     </p>
+
+
+                    <div class="about-quote">
+                        "Code. Create. Learn. Repeat."
+                    </div>
 
                 </div>
 
@@ -147,25 +228,37 @@
 
 
 
-        <!-- ==============================
+        <!-- =================================
              SKILLS
-        =============================== -->
+        ================================== -->
 
         <section id="skills">
+
+            <div class="section-heading">
+
+                <span class="section-line"></span>
+
+                <p>WHAT I WORK WITH</p>
+
+                <span class="section-line"></span>
+
+            </div>
+
 
             <h2>
                 My Skills
             </h2>
 
+
             <div class="cards">
 
 
-                <!-- Skill 1 -->
+                <!-- HTML -->
 
                 <div class="card skill-card">
 
-                    <div class="card-icon">
-                        🌐
+                    <div class="skill-icon">
+                        &lt;/&gt;
                     </div>
 
                     <h3>
@@ -173,20 +266,20 @@
                     </h3>
 
                     <p>
-                        Creating responsive,
-                        modern, and user-friendly
-                        websites.
+                        Creating clean, responsive,
+                        and modern websites.
                     </p>
 
                 </div>
 
 
-                <!-- Skill 2 -->
+
+                <!-- JavaScript -->
 
                 <div class="card skill-card">
 
-                    <div class="card-icon">
-                        ⚡
+                    <div class="skill-icon">
+                        JS
                     </div>
 
                     <h3>
@@ -194,19 +287,20 @@
                     </h3>
 
                     <p>
-                        Creating interactive
-                        and dynamic web experiences.
+                        Creating interactive and
+                        dynamic web experiences.
                     </p>
 
                 </div>
 
 
-                <!-- Skill 3 -->
+
+                <!-- PHP -->
 
                 <div class="card skill-card">
 
-                    <div class="card-icon">
-                        🗄️
+                    <div class="skill-icon">
+                        PHP
                     </div>
 
                     <h3>
@@ -214,19 +308,20 @@
                     </h3>
 
                     <p>
-                        Developing dynamic systems
-                        and database-driven websites.
+                        Developing database-driven
+                        web applications.
                     </p>
 
                 </div>
 
 
-                <!-- Skill 4 -->
+
+                <!-- Java -->
 
                 <div class="card skill-card">
 
-                    <div class="card-icon">
-                        💻
+                    <div class="skill-icon">
+                        ☕
                     </div>
 
                     <h3>
@@ -234,7 +329,7 @@
                     </h3>
 
                     <p>
-                        Building applications while
+                        Building applications and
                         practicing programming concepts.
                     </p>
 
@@ -246,89 +341,127 @@
 
 
 
-        <!-- ==============================
+        <!-- =================================
              PROJECTS
-        =============================== -->
+        ================================== -->
 
         <section id="projects">
+
+            <div class="section-heading">
+
+                <span class="section-line"></span>
+
+                <p>MY RECENT WORK</p>
+
+                <span class="section-line"></span>
+
+            </div>
+
 
             <h2>
                 My Projects
             </h2>
 
+
             <div class="cards">
 
 
-                <!-- Project 1 -->
+                <!-- PROJECT 1 -->
 
                 <article class="card project-card">
 
-                    <div class="project-number">
+                    <span class="project-number">
                         01
+                    </span>
+
+
+                    <div class="project-icon">
+                        🌐
                     </div>
 
+
                     <h3>
-                        Portfolio Website
+                        ePortfolio Website
                     </h3>
 
+
                     <p>
-                        A personal ePortfolio website
+                        A personal portfolio website
                         designed to showcase my skills,
                         projects, and academic work.
                     </p>
 
-                    <button>
-                        View Project
+
+                    <button class="project-button">
+                        View Project →
                     </button>
 
                 </article>
 
 
-                <!-- Project 2 -->
+
+                <!-- PROJECT 2 -->
 
                 <article class="card project-card">
 
-                    <div class="project-number">
+                    <span class="project-number">
                         02
+                    </span>
+
+
+                    <div class="project-icon">
+                        🛒
                     </div>
+
 
                     <h3>
                         POS & Inventory System
                     </h3>
 
+
                     <p>
-                        A proposed system designed to
-                        manage sales, products, inventory,
+                        A proposed system for managing
+                        sales, products, inventory,
                         and transactions.
                     </p>
 
-                    <button>
-                        View Project
+
+                    <button class="project-button">
+                        View Project →
                     </button>
 
                 </article>
 
 
-                <!-- Project 3 -->
+
+                <!-- PROJECT 3 -->
 
                 <article class="card project-card">
 
-                    <div class="project-number">
+                    <span class="project-number">
                         03
+                    </span>
+
+
+                    <div class="project-icon">
+                        🅿️
                     </div>
 
+
                     <h3>
-                        Parking System
+                        Smart Parking System
                     </h3>
+
 
                     <p>
                         A parking management project
                         involving sensors, logic,
-                        and automated parking functions.
+                        and automated functions.
                     </p>
 
-                    <button>
-                        View Project
+
+                    <button class="project-button">
+                        View Project →
                     </button>
 
                 </article>
@@ -339,34 +472,49 @@
 
 
 
-        <!-- ==============================
-             QUIZ
-        =============================== -->
+        <!-- =================================
+             QUIZZES
+        ================================== -->
 
         <section id="quiz">
+
+            <div class="section-heading">
+
+                <span class="section-line"></span>
+
+                <p>ACADEMIC WORK</p>
+
+                <span class="section-line"></span>
+
+            </div>
+
 
             <h2>
                 My Quizzes
             </h2>
 
+
             <div class="cards">
 
 
-                <!-- Quiz 1 -->
+                <!-- QUIZ 1 -->
 
                 <article class="card quiz-card">
 
                     <div class="quiz-icon">
-                        📝
+                        01
                     </div>
+
 
                     <h3>
                         Quiz 1
                     </h3>
 
+
                     <p>
                         Date: August 25, 2026
                     </p>
+
 
                     <span class="completed">
                         Completed
@@ -375,21 +523,25 @@
                 </article>
 
 
-                <!-- Quiz 2 -->
+
+                <!-- QUIZ 2 -->
 
                 <article class="card quiz-card">
 
                     <div class="quiz-icon">
-                        📚
+                        02
                     </div>
+
 
                     <h3>
                         Quiz 2
                     </h3>
 
+
                     <p>
                         Date: Coming Soon
                     </p>
+
 
                     <span class="pending">
                         Pending
@@ -398,21 +550,25 @@
                 </article>
 
 
-                <!-- Quiz 3 -->
+
+                <!-- QUIZ 3 -->
 
                 <article class="card quiz-card">
 
                     <div class="quiz-icon">
-                        📖
+                        03
                     </div>
+
 
                     <h3>
                         Quiz 3
                     </h3>
 
+
                     <p>
                         Date: Coming Soon
                     </p>
+
 
                     <span class="pending">
                         Pending
@@ -426,41 +582,57 @@
 
 
 
-        <!-- ==============================
+        <!-- =================================
              CONTACT
-        =============================== -->
+        ================================== -->
 
         <section id="contact">
+
+            <div class="section-heading">
+
+                <span class="section-line"></span>
+
+                <p>GET IN TOUCH</p>
+
+                <span class="section-line"></span>
+
+            </div>
+
 
             <h2>
                 Contact Me
             </h2>
 
+
             <div class="contact-card">
+
+                <div class="contact-coffee">
+                    ☕
+                </div>
+
 
                 <h3>
                     Let's Connect
                 </h3>
 
+
                 <p>
-                    If you would like to get in touch
-                    with me, feel free to contact me
-                    through the information below.
+                    Feel free to contact me for
+                    projects, school activities,
+                    or collaboration.
                 </p>
+
 
                 <div class="contact-info">
 
-                    <p>
-                        📧
-                        <strong>Email:</strong>
-                        jmgsarsaba@gmail.com
-                    </p>
+                    <a href="mailto:jmgsarsaba@gmail.com">
+                        📧 jmgsarsaba@gmail.com
+                    </a>
 
-                    <p>
-                        📱
-                        <strong>Phone:</strong>
-                        +63 936 316 7176
-                    </p>
+
+                    <a href="tel:+639363167176">
+                        📱 +63 936 316 7176
+                    </a>
 
                 </div>
 
@@ -473,18 +645,24 @@
 
 
 
-    <!-- ==============================
+    <!-- =================================
          FOOTER
-    =============================== -->
+    ================================== -->
 
     <footer>
+
+        <div class="footer-logo">
+            ☕
+        </div>
+
 
         <p>
             © 2026 Jessam Misael G. Sarsaba
         </p>
 
+
         <p class="footer-text">
-            Designed with ☕ and code.
+            Designed with coffee & code.
         </p>
 
     </footer>
