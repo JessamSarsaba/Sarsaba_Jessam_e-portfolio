@@ -1,4 +1,3 @@
-
 /* =========================================
    PROFESSIONAL COFFEE PORTFOLIO JAVASCRIPT
 ========================================= */
@@ -153,6 +152,9 @@ window.addEventListener("load", updateActiveLink);
 ========================================= */
 
 document.addEventListener("click", function(event) {
+    // Prevent particles from appearing if clicking links or interactive items
+    if (event.target.tagName === 'A' || event.target.tagName === 'BUTTON') return;
+
     const particle = document.createElement("span");
 
     particle.textContent = "✦";
