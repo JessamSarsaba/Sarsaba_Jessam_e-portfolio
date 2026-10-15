@@ -1,4 +1,3 @@
-
 /* =========================================
    COFFEE-THEMED EPORTFOLIO
 ========================================= */
@@ -440,7 +439,7 @@ section > h2 {
 }
 
 /* =========================================
-   MY QUIZ
+   MY QUIZ & RESPONSIVE LAYOUT FIXED
 ========================================= */
 
 .quiz-cards {
@@ -452,328 +451,87 @@ section > h2 {
 }
 
 .quiz-icon {
-    width: 65px;
-    height: 65px;
+    width: 66px;
+    height: 66px;
+    margin: 0 auto 20px;
     display: grid;
     place-items: center;
-    border-radius: 50%;
-    margin: 0 auto 20px;
+    border-radius: 15px;
     background: var(--cream);
     color: var(--gold);
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     font-weight: 800;
 }
 
-.quiz-card > p {
-    margin-bottom: 18px;
-}
-
-.completed,
-.pending {
-    display: inline-block;
-    padding: 5px 14px;
-    border-radius: 30px;
-    font-size: 0.82rem;
-    font-weight: 700;
-}
-
 .completed {
-    background: #e3f4e9;
-    color: #287b50;
+    display: inline-block;
+    background: rgba(40, 123, 80, 0.1);
+    color: var(--green);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin: 10px 0 20px;
 }
-
-.pending {
-    background: #f5ead9;
-    color: #92652d;
-}
-
-/* QUIZ RESULT SCREENSHOT */
 
 .quiz-result-wrap {
-    margin-top: 25px;
-    padding-top: 20px;
+    margin-top: 15px;
+    padding-top: 15px;
     border-top: 1px solid var(--border);
-    width: 100%;
+    text-align: left;
 }
 
 .quiz-result-wrap h4 {
-    color: var(--coffee);
     font-size: 1rem;
-    margin-bottom: 15px;
+    color: var(--coffee-dark);
+    margin-bottom: 12px;
+    text-align: center;
 }
 
+/* Styles for your uploaded quiz image */
 .quiz-result-image {
-    display: block;
     width: 100%;
     height: auto;
+    border-radius: 8px;
     border: 1px solid var(--border);
-    border-radius: 10px;
-    box-shadow: 0 7px 20px rgba(47, 29, 17, 0.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+    display: block;
 }
 
 .quiz-score {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
-    margin-top: 18px;
-    padding: 15px 8px;
-    background: var(--cream);
-    border-radius: 12px;
-}
-
-.quiz-score > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    text-align: center;
+    margin-top: 15px;
 }
 
 .score-number {
-    color: var(--green);
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    display: block;
+    font-size: 1.2rem;
     font-weight: 800;
+    color: var(--coffee);
 }
 
 .score-label {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 700;
     color: var(--muted);
-    font-size: 0.65rem;
-    font-weight: 800;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    margin-top: 2px;
 }
 
-/* =========================================
-   CONTACT
-========================================= */
-
-.contact-card {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 45px 30px;
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    box-shadow: var(--shadow);
-}
-
-.contact-coffee {
-    font-size: 3rem;
-    margin-bottom: 12px;
-}
-
-.contact-card h3 {
-    font-size: 1.6rem;
-    margin-bottom: 12px;
-}
-
-.contact-card > p {
-    max-width: 470px;
-    margin: 0 auto;
-    color: var(--muted);
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 25px;
-}
-
-.contact-info a {
-    overflow-wrap: anywhere;
-    color: var(--coffee-light);
-    transition: color 0.2s;
-}
-
-.contact-info a:hover {
-    color: var(--gold);
-}
-
-/* =========================================
-   FOOTER
-========================================= */
-
-footer {
-    text-align: center;
-    padding: 35px 20px;
-    background: var(--coffee-dark);
-    color: #e8d8c6;
-}
-
-.footer-logo {
-    font-size: 2rem;
-    margin-bottom: 8px;
-}
-
-footer p {
-    font-size: 0.9rem;
-}
-
-.footer-text {
-    margin-top: 4px;
-    color: #bda994;
-}
-
-/* =========================================
-   PAGE LOAD ANIMATION
-========================================= */
-
-body.loaded .hero-content {
-    animation: heroEnter 0.9s ease both;
-}
-
-@keyframes heroEnter {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+/* Responsive fix for grid layouts on small screens */
+@media (max-width: 768px) {
+    .cards, .about-card {
+        grid-template-columns: 1fr;
     }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* =========================================
-   RESPONSIVE DESIGN
-========================================= */
-
-@media (max-width: 900px) {
-    nav {
-        padding: 22px 0;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .nav-links {
-        justify-content: center;
-        gap: 16px 22px;
-    }
-
-    .hero-content {
-        padding-top: 70px;
-    }
-
-    .cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .about-card {
-        grid-template-columns: 95px 1fr;
-        gap: 25px;
-        padding: 30px;
-    }
-
     .about-icon {
-        width: 90px;
-        height: 90px;
-        font-size: 3rem;
+        margin: 0 auto 15px;
     }
-}
-
-@media (max-width: 600px) {
-    nav {
-        width: 92%;
-        gap: 16px;
-    }
-
-    .logo {
-        font-size: 1.2rem;
-    }
-
-    .nav-links {
-        gap: 10px 16px;
-    }
-
-    .nav-links a {
-        font-size: 0.82rem;
-    }
-
-    .hero-content {
-        width: 88%;
-        padding: 60px 0 110px;
-    }
-
-    .hero h1 {
-        letter-spacing: -1px;
-    }
-
-    .hero-description {
-        font-size: 0.95rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-        max-width: 280px;
-    }
-
-    .button {
+    .about-card {
         text-align: center;
-    }
-
-    section {
-        width: 88%;
-        padding: 70px 0;
-    }
-
-    section > h2 {
-        margin-bottom: 30px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .card {
-        padding: 25px;
-    }
-
-    .about-card {
-        grid-template-columns: 1fr;
-        padding: 25px;
-        gap: 20px;
-    }
-
-    .about-icon {
-        width: 75px;
-        height: 75px;
-        font-size: 2.5rem;
-    }
-
-    .section-heading p {
-        font-size: 0.68rem;
-        letter-spacing: 2px;
-    }
-
-    .quiz-score {
-        gap: 4px;
-    }
-
-    .score-label {
-        font-size: 0.58rem;
-    }
-
-    .contact-card {
-        padding: 30px 20px;
-    }
-}
-
-/* REDUCED MOTION ACCESSIBILITY */
-
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-
-    section {
-        opacity: 1;
-        transform: none;
     }
 }
